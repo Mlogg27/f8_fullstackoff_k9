@@ -1,0 +1,22 @@
+.container {
+  margin: 20px 30px;
+}
+.container h1 {
+  color: #515a7f;
+}
+.container p {
+  color: #595d67;
+}
+.container a {
+  color: #508cc7;
+}
+.container .content-box {
+  border: 1px solid #595d67;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 37rem;
+}
+.container .content-box a {
+  display: flex;
+  column-gap: 5px;
+}

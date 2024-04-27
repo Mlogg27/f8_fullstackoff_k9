@@ -1,0 +1,28 @@
+.container {
+  width: 700px;
+  margin: 100px auto;
+  position: relative;
+}
+.container .ic-1 {
+  padding: 12px 14px 12px 14px;
+  border-radius: 50%;
+  background: #cccccc;
+  position: absolute;
+  top: -45px;
+  left: -60px;
+}
+.container .ic-1 i {
+  transform: translateX(5px);
+}
+.container .ic-2 {
+  padding: 12px 14px 12px 14px;
+  background-color: #cccccc;
+  position: absolute;
+  border-radius: 50%;
+  right: -55px;
+  top: 80px;
+}
+
+.container .ic-2 i {
+  transform: translateX(5px);
+}

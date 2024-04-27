@@ -1,0 +1,20 @@
+ul {
+  list-style-type: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container li {
+  display: flex;
+  column-gap: 8px;
+}
+.container li svg {
+  width: 40px;
+}
+.container li p {
+  transform: translateY(8px);
+  font-weight: 700;
+}

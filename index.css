@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  /* text-decoration: none; */
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+/* End reset css */
+h1 {
+  margin: 10px auto;
+}
