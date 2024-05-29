@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .plus-ic {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: white;
+}
+.container .minus-ic {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  display: none;
+  color: white;
+}
+.container h2 {
+  background: #d85824;
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container p {
+  margin-left: 15px;
+  margin-top: 5px;
+  display: none;
+}
+.container .checkbox-1:checked ~ .content,
+.container .checkbox-1:checked ~ .minus-ic {
+  display: block;
+}
+.container .checkbox-1:checked ~ .plus-ic {
+  display: none;
+}
