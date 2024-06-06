@@ -1,0 +1,287 @@
+@font-face {
+  font-family: Ra;
+  src: url(https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap);
+}
+@font-face {
+  font-family: Web;
+  src: url(https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+/* end reset css */
+body {
+  background-image: url(https://hoanganf8.github.io/htmlcss_project02/image/landing-background.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+}
+.container .landing-bg {
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  background: url(../image/dot-texture.png) repeat 0 0 #fff;
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  pointer-events: none;
+}
+
+.container .landing-content {
+  min-width: 584px;
+  position: absolute;
+  left: 13%;
+  top: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .landing-content .logo {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.container .landing-text-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .landing-text-button h2 {
+  font-family: Ra, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1em;
+  color: #fff;
+  text-align: center;
+}
+.container .landing-text-button h1 {
+  position: relative;
+  top: -20px;
+  font-size: 5em;
+  font-family: Web, sans-serif;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  max-width: 444px;
+  letter-spacing: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .landing-text-button p {
+  font-family: Ra, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  max-width: 400px;
+  text-align: center;
+}
+.container .landing-text-button .button {
+  margin-top: 40px;
+}
+.container .landing-text-button .button .container {
+  min-width: 382px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container .landing-text-button .button p {
+  font-family: Ra, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  line-height: 54px;
+  border: 1px solid #fff;
+}
+.container .landing-text-button .button .text-1 {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  min-width: 180px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.container .landing-text-button .button .text-2 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.form-number-1 {
+  min-width: 484px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: 13%;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-number-1 .container {
+  max-width: 356px;
+  display: flex;
+  flex-direction: column;
+}
+.form-number-1 .container h2 {
+  text-align: center;
+  font-family: Ra, sans-serif;
+  font-size: 26px;
+  line-height: 26px;
+  color: #3e3f5e;
+  margin-top: 62.5px;
+  margin-bottom: 78px;
+}
+.form-number-1 .container .input-1,
+.form-number-1 .container .input-2 {
+  position: relative;
+}
+.form-number-1 .container input {
+  margin-bottom: 26px;
+  min-height: 54px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  min-width: none;
+  min-width: 356px;
+  position: relative;
+  outline: none;
+}
+.form-number-1 .container .custom-placeholder-1,
+.form-number-1 .container .custom-placeholder-2 {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  font-family: Ra, sans-serif;
+  font-weight: 500;
+  color: gray;
+  font-size: 18px;
+  background-color: #fff;
+  width: 100px;
+  text-align: center;
+  border-radius: 12px;
+  transition: top, ease-in-out, 0.2s;
+}
+.form-number-1 .container .custom-placeholder-2 {
+  width: 160px;
+}
+.form-number-1 .container input:focus {
+  border: 1px solid darkblue;
+}
+.form-number-1 .container input:focus + .custom-placeholder-1,
+.form-number-1 .container input:focus + .custom-placeholder-2 {
+  top: -8px;
+  font-size: 16px;
+}
+.form-number-1 .row {
+  display: flex;
+  position: relative;
+  margin-bottom: 28px;
+}
+.form-number-1 .row label,
+a {
+  font-family: Ra, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+.form-number-1 .row a {
+  color: gray;
+  transform: translateX(45px);
+}
+.form-number-1 .row .custom-box {
+  width: 22p;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  background-color: #fff;
+  position: relative;
+}
+.form-number-1 .row .custom-box::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #fff;
+  position: absolute;
+  rotate: 40deg;
+  top: 6px;
+  left: 0px;
+}
+.form-number-1 .row .custom-box::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #fff;
+  position: absolute;
+  rotate: 140deg;
+  top: -5px;
+  left: -0.5px;
+}
+.form-number-1 .row #custom-checkbox:checked ~ .custom-box {
+  background-color: #23d2e2;
+}
+.form-number-1 .button {
+  background-color: #615dfa;
+  color: #fff;
+  font-family: Ra, sans-serif;
+  font-size: 14px;
+  line-height: 54px;
+  font-weight: 700;
+  min-width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.form-number-1 .button:focus {
+  border: 1px solid black;
+}
+.form-number-1 .social-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-number-1 .social-contact h4 {
+  font-family: Ra, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3e3f5e;
+  margin-bottom: 30px;
+}
+.form-number-1 .social-contact .row {
+  display: flex;
+  width: 354px;
+}
+.form-number-1 .social-contact .row a {
+  translate: 0;
+  transition: transform, ease, 0.2s;
+}
+.form-number-1 .social-contact .row a:hover {
+  translate: 0 -6px;
+}
+@media screen and (max-width: 1500px) {
+  .container .landing-bg {
+    display: none;
+  }
+}
