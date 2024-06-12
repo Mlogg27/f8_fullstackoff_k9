@@ -419,6 +419,23 @@ ul {
 }
 .feature-content-4 .content .image .picture-text .read-more {
   display: flex;
-  align-items: right;
-  width: 236px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  align-items: center;
+}
+.feature-content-4 .content .image .picture-text .read-more a {
+  transform: translateX(185px);
+  transition: transform, ease, 0.2s;
+  color: var(--orange);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.feature-content-4 .content .image .picture-text .read-more i {
+  transform: translateX(-5px);
+  color: var(--orange);
+}
+.feature-content-4 .content .image .picture-text .read-more a:hover {
+  transform: translateX(180px);
 }
