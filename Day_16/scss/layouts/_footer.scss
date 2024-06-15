@@ -1,1 +1,151 @@
-//style của footer của dự án
+.footer{
+    margin-top: 100px;
+    background-color: #F2FFEC;
+    .container{
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .navigation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 226px;
+            &::after{
+                content:'';
+                width: 975px;
+                height: 1.67px;
+                background-color: #A3A3A3;
+                position: absolute;
+                bottom: 0;
+            }
+            h3{
+                color: #46B20F;
+                font-size: 16.667px;
+                font-weight: 600;
+                line-height: 21.667px;
+            }
+            .logo{
+                display: flex;
+                flex-direction: column;
+                width: 192px;
+                row-gap: 24.58px;
+                margin-right: 107.5px;
+                img{
+                    width: 132px;
+                    height: 89px;
+                }
+                p{
+                    font-size: 13.333px;
+                    font-weight: 400;
+                    line-height: 20.417px;
+                }
+            }
+            .home, .news, .contact{
+                display: flex;
+                flex-direction: column;
+                row-gap: 6.67px;
+                margin-right: 89px;
+                h3{
+                    margin-bottom: calc(13px - 6.67px);
+                }
+                a{
+                    font-size: 16px;
+                    font-weight: 400; 
+                    line-height: 20.417px; 
+                }
+            }
+            .news{
+                margin-right: 69.67px;
+                .row-1, .row-2{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    span{
+                        font-weight: 600;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .contact{
+                width: 207px;
+                margin: 0;
+                .row-1, .row-2, .row-3{
+                      display: flex;
+                      align-items: center;
+                      column-gap: 10px;
+                    }
+                .row-3{
+                      align-items: start;
+                }
+            }
+        }
+        .verify-contact{
+            margin-top: 24px;
+            width: 986px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .contact{
+                display: flex;
+                align-items: center;
+                column-gap: 6.67px;
+                .image{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #DCFFCA;
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+@media screen and (max-width: 992px) {
+    .wrapper-inner .footer{
+        width: 100vw;
+        .container{
+            width: 100%;
+            .navigation{
+                width: 100%;
+                flex-wrap: wrap;
+                height: auto;
+                &::after{
+                    bottom: -10px;
+                    width: 80vw;
+                }
+            }
+            .verify-contact{
+                width: 81vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper-inner .footer{
+        .container{
+            .navigation{
+                row-gap: 20px;
+                column-gap: 30px;
+                align-items: unset;
+                .logo, .home, .news, .contact{
+                    margin: 0;
+                }
+            }
+            .verify-contact{
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                column-gap: 5px;
+                row-gap: 20px;
+            }
+        }
+    }
+}

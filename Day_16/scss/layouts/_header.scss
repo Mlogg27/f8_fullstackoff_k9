@@ -93,8 +93,9 @@ $colorHeaderActive: #46B20F;
 }
 @media screen and (max-width: 1200px) {
     .header{
+        width: 100vw;
         .container{
-            width: 100%;
+            width: 100vw;
             position: relative;
             align-items: center;
             z-index: inherit;
@@ -150,6 +151,7 @@ $colorHeaderActive: #46B20F;
 }
 #checkboxNav:checked ~ .nav{
     left: 50vw;
+    display: block;
 }
 #checkboxNav:checked ~ .nav-bg{
     display: block;
