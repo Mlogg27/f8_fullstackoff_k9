@@ -658,6 +658,12 @@ $textContentColor: #2C2C2C;
     }
     .content-logo{
         width: 992px;
+        .logo{
+            transform: translateX(100px);
+        }
+        .landing-text{
+            transform: translateX(140px);
+        }
     }
    }
 
@@ -698,6 +704,7 @@ $textContentColor: #2C2C2C;
 
 @media screen and (max-width: 1200px) {
  .main .container{
+
     .feature-content-2{
         .container{
             .content-layout{
@@ -765,7 +772,7 @@ $textContentColor: #2C2C2C;
             .landing-text {
                 p{
                     font-size: 12vw;
-                    transform: translateX(-100px);
+                    transform: translateX(-200px);
                 }
             }
         }
@@ -785,7 +792,12 @@ $textContentColor: #2C2C2C;
     .main .container{
         .feature-content-1{
             .content-logo{
-                width:576px;
+                width: 576px;
+                .logo{
+                    img{
+                        transform: translateX(-150px);
+                    }
+                }
             }
         }
    
@@ -890,10 +902,10 @@ $textContentColor: #2C2C2C;
     .main .container{
         .feature-content-1{
             .content-logo{
-                width: 80%;
+                width: 65%;
                 .logo{
                     img{
-                    transform: translate(0);
+                    transform: translate(-130px);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -904,7 +916,7 @@ $textContentColor: #2C2C2C;
                         text-align: center;
                         writing-mode: horizontal-tb;
                         font-size: 10vw;
-                        transform: translateX(0);
+                        transform: translateX(-160px);
                         display: flex;
                         align-items: center;
                         justify-content: center;
