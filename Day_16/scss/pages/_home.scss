@@ -1,15 +1,17 @@
 $textContentColor: #2C2C2C;
 .wrapper-inner{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .main{
     margin-top: 108px;
     position: relative;
     overflow: hidden;
+    width: 100vw;
     .container{
         width: 1200px;
         margin: 0 auto;
@@ -25,13 +27,13 @@ $textContentColor: #2C2C2C;
     display: flex;
     flex-direction: row;
     z-index: 100;
-    column-gap: 9.875vw;
+    column-gap: 111px;
     max-width: 1200px;
     height: 708px;
     .content-text{
       margin-top: 226px;
+      min-width: 514px;
       span{
-          width: 600;
           font-size: 32px;
           font-weight: 800;
           line-height: 131.523%;
@@ -51,7 +53,6 @@ $textContentColor: #2C2C2C;
       }
     }
     .content-logo{
-          min-width: 50vw;
           background-color: #DCFFCA;
           border-radius: 16.667px 0px 0px 16.667px;
           display: flex;
@@ -59,7 +60,7 @@ $textContentColor: #2C2C2C;
           align-items: center;
           .logo{
             img{
-                transform: translateX(-67px);
+                transform: translateX(-164px);
             }
           }
           .landing-text{
@@ -68,7 +69,7 @@ $textContentColor: #2C2C2C;
                 font-size: 166.667px;
                 font-weight: 800;
                 writing-mode: vertical-rl;
-                transform: translateX(-200px);
+                transform: translateX(-310px);
             }
           }
 
@@ -572,7 +573,7 @@ $textContentColor: #2C2C2C;
         display: flex;
         align-items: center;
         justify-content: center;
-        column-gap: 118px;
+        column-gap: 116px;
         .form-box{
             display: flex;
             flex-direction: column;
