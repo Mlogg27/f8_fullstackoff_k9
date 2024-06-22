@@ -9,7 +9,7 @@ var saleRate=10/100;
 var total=0;
 
 if (distance<=0){
-    console.log(`Rồi taxi làm gì???`)
+    console.log(`Rồi taxi làm gì???`);
 } else {
     if (distance<=1){
         total+=price;
