@@ -1,12 +1,6 @@
-var a= -5;
-var b = -1;
-var c= -10;
-if (a > b && a>c) {
-    console.log(a);
+var s=0;
+var n=3;
+for(var i=1; i<=n; i++){
+    s += i*(i+1);
 }
-else if (b > c ){
-    console.log(b);
-}
-else {
-    console.log(c);
-}
+console.log(s);

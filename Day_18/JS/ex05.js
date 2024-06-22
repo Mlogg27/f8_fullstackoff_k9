@@ -1,19 +1,14 @@
-var a=-2;
-var b=0;
-var c=-1;
-if (a>b){
-    a+=b;
-    b= a-b;
-    a -=b;
+var N=10; //Số dòng
+var number=1;
+var numberTriangle=`<p style="margin: 30px; display: flex; justify-content: center; align-items: center">`;
+
+for( var i=1; i<=N; i++){
+    var nextNumber="";
+    for( var j=1; j<=i; j++){
+        nextNumber += number + " ";
+        number++;
+    }
+    numberTriangle += nextNumber +`<br>`;
 }
-if (b>c) {
-    b+=c;
-    c= b-c;
-    b -=c;
-}
-if (a>c) {
-    a+=c;
-    c= a-c;
-    a -=c;
-}
-console.log(`Thứ tăng dần là ${a}, ${b}, ${c}`);
+numberTriangle += `</p>`;
+document.write(numberTriangle);
