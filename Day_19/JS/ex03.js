@@ -20,6 +20,9 @@ function numberToText(number){
     result+= numberSpeak(hundreds) + ' trăm ';
     number %= 100;
     }
+    if(hundreds===0){
+        result+= 'không trăm linh ';
+    }
 
     if (number>=11&&number<=19){
         switch(number){
@@ -59,4 +62,4 @@ function numberSpeak(number){
         case 9: return 'chín';
     }
 }
-numberToText(789);
+numberToText(320);
