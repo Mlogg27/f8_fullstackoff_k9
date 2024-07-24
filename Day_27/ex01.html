@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/ex01.css" />
+    <style>
+      .disappear {
+        display: none !important;
+      }
+      .changeBackgroundColor {
+        color: #fff;
+        background-color: rgba(169, 161, 161, 0.707);
+      }
+      .input-background {
+        border: none;
+        background-color: #e2e8f0;
+      }
+    </style>
+    <title>Form Đăng Nhập Dân trí</title>
+  </head>
+  <body>
+    <div class="container">
+      <a class="login-link">Đăng nhập</a>
+
+      <div class="form-content">
+        <div class="container">
+          <div class="login-register-link">
+            <a class="login">Đăng nhập</a>
+            <a class="register">Đăng ký</a>
+          </div>
+
+          <form id="form-1" class="login-form">
+            <div class="container">
+              <p>với các tài khoản mạng xã hội</p>
+              <div class="social">
+                <img
+                  src="https://images.unsplash.com/photo-1616499370260-485b3e5ed653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1616499370260-485b3e5ed653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
+
+              <span class="decoration-text">
+                <span class="text">hoặc</span>
+              </span>
+
+              <div class="input-box">
+                <span class="login-warning">Account not exist </span>
+
+                <label for="email-1"
+                  ><p>Email</p>
+                  <input id="email-1" type="text" placeholder="Email" />
+                </label>
+                <span class="warning-text">Vui lòng nhập thông tin</span>
+
+                <label for="password-1"
+                  ><p>Mật khẩu</p>
+                  <input
+                    id="password-1"
+                    type="password"
+                    placeholder="Mật khẩu"
+                  />
+                  <span class="see-password"
+                    ><i class="fa-solid fa-eye"></i
+                  ></span>
+                </label>
+                <span class="warning-text">Vui lòng nhập thông tin</span>
+              </div>
+              <a href="#!" class="forgot-password">Quên mật khẩu?</a>
+              <a class="login-action-link">Đăng nhập</a>
+            </div>
+          </form>
+          <!-- End .login-form -->
+
+          <form id="form-2" class="register-form">
+            <div class="container">
+              <p class="heading-text">
+                Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
+              </p>
+
+              <div class="input-box">
+                <label for="username">
+                  <p>Họ và tên</p>
+                  <input id="username" type="text" placeholder="Họ và tên" />
+                </label>
+                <span class="warning-text">Vui lòng nhập thông tin</span>
+
+                <label for="user-email">
+                  <p>Email</p>
+                  <input id="user-mail" type="text" placeholder="Email" />
+                </label>
+                <span class="warning-text">Vui lòng nhập thông tin</span>
+
+                <label for="user-password">
+                  <p>Mật khẩu</p>
+                  <input
+                    id="user-password"
+                    type="password"
+                    placeholder="Mật khẩu"
+                  />
+                  <span class="see-password"
+                    ><i class="fa-solid fa-eye"></i
+                  ></span>
+                </label>
+                <span class="warning-text">Vui lòng nhập thông tin</span>
+              </div>
+
+              <p>
+                Bằng cách đăng ký tài khoản bạn đồng thời chấp nhận mọi
+                <a href="#!">điều kiện và chính sách của dân trí</a>
+              </p>
+              <a class="register-action-link">Đăng ký</a>
+            </div>
+          </form>
+          <!-- End .register-form -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./ex01.js"></script>
+  </body>
+</html>

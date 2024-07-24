@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  background-color: rgb(212, 198, 198);
+}
+
+.container {
+  position: relative;
+  display: flex;
+}
+.container .login-link {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  color: #000;
+}
+.container .form-content {
+  padding-top: 200px;
+  margin: 0 auto;
+}
+.container .form-content .container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .form-content .container .login-register-link {
+  display: flex;
+  width: 100%;
+}
+.container .form-content .container .login-register-link a {
+  flex: 1;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+}
+.container .form-content .container #form-1 {
+  width: 18rem;
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .form-content .container #form-1 .container {
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  row-gap: 5px;
+  overflow: hidden;
+}
+.container .form-content .container #form-1 .container .login-warning {
+  color: red;
+}
+.container .form-content .container #form-1 .container .social {
+  display: flex;
+  column-gap: 20px;
+}
+.container .form-content .container #form-1 .container .social img {
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.container .form-content .container #form-1 .container .decoration-text {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.container .form-content .container #form-1 .container .decoration-text .text {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  display: block;
+  width: 40px;
+  text-align: center;
+}
+.container .form-content .container #form-1 .container .decoration-text::after {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.container .form-content .container #form-1 .container .input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.container .form-content .container #form-1 .container .input-box label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  position: relative;
+}
+.container .form-content .container #form-1 .container .input-box label span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+.container .form-content .container #form-1 .container .input-box .warning-text {
+  color: red;
+}
+.container .form-content .container #form-1 .container .forgot-password {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  color: gray;
+  font-weight: 400;
+}
+.container .form-content .container #form-1 .container .login-action-link {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+  background-color: rgb(13, 83, 13);
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.container .form-content .container #form-2 {
+  margin: 10px 0;
+  width: 16rem;
+  font-size: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .form-content .container #form-2 .container {
+  width: 80%;
+  display: flex;
+  row-gap: 5px;
+}
+.container .form-content .container #form-2 .container .heading-text {
+  font-weight: 600;
+}
+.container .form-content .container #form-2 .container .input-box {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+.container .form-content .container #form-2 .container .input-box label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  position: relative;
+}
+.container .form-content .container #form-2 .container .input-box label span {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+}
+.container .form-content .container #form-2 .container .input-box .warning-text {
+  color: red;
+}
+.container .form-content .container #form-2 .container p a {
+  color: rgb(89, 89, 174);
+}
+.container .form-content .container #form-2 .container .register-action-link {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+  background-color: rgb(13, 83, 13);
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=ex01.css.map */
