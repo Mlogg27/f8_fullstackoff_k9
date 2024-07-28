@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Poppins, sans-serif;
+  background-color: #8758FF;
+}
+
+.wrapper-inner {
+  display: flex;
+}
+.wrapper-inner .todos-box {
+  margin: 80px auto;
+  background-color: #1A1A40;
+  width: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-inner .todos-box .container {
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 8px;
+  padding-bottom: 32px;
+}
+.wrapper-inner .todos-box .container h1 {
+  margin-top: 32px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 28px;
+  padding: 0 67px;
+  text-align: center;
+}
+.wrapper-inner .todos-box .container .task-content {
+  margin: 16px 0 32px 0;
+  display: flex;
+}
+.wrapper-inner .todos-box .container .task-content input {
+  border: 1px solid #8758FF;
+  padding: 9px 17px;
+  width: 266px;
+  height: 21px;
+  background-color: transparent;
+  color: #fff;
+}
+.wrapper-inner .todos-box .container .task-content button {
+  min-width: 78.6px;
+  min-height: 38.59px;
+  color: #fff;
+  background-color: #8758FF;
+  border: none;
+}
+.wrapper-inner .todos-box .container .added-task {
+  background-color: #8758FF;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 17px;
+  box-sizing: border-box;
+}
+.wrapper-inner .todos-box .container .added-task p {
+  color: #fff;
+  font-weight: 600;
+}
+.wrapper-inner .todos-box .container .added-task div {
+  display: flex;
+  column-gap: 12px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=ex01.css.map */
