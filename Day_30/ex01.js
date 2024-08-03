@@ -41,6 +41,55 @@ circleEl.addEventListener("mousemove", function (e) {
   e.stopPropagation();
 });
 
+//Xây dựng audio
+audio.addEventListener("canplay", function () {
+  durationEl.innerText = getTimeFormat(audio.duration);
+});
+
+playAction.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio.addEventListener("play", function () {
+  playAction.classList.replace("fa-play", "fa-pause");
+});
+
+audio.addEventListener("pause", function () {
+  playAction.classList.replace("fa-pause", "fa-play");
+});
+
+audio.addEventListener("timeupdate", timeUpdate);
+
+processBar.addEventListener("mousemove", createTimeCurrentBox);
+
+function createTimeCurrentBox(e) {
+  var rate = (e.offsetX / processBarWidth) * 100;
+  var seconds = getTimeFormat((rate / 100) * audio.duration);
+
+  if (!timeCurrentBox) {
+    timeCurrentBox = document.createElement("span");
+    timeCurrentBox.classList.add("time-box");
+    processBar.appendChild(timeCurrentBox);
+  }
+
+  timeCurrentBox.innerText = `${seconds}`;
+  timeCurrentBox.style.left = `${rate}%`;
+}
+
+processBar.addEventListener("mouseleave", removeTimeCurrentBox);
+
+audio.addEventListener("ended", function () {
+  audio.currentTime = 0;
+  processEl.style.width = "0%";
+  currentTimeEl.innerText = getTimeFormat(0);
+  playAction.classList.replace("fa-pause", "fa-play");
+});
+
+//function
 function handleDrop() {
   document.removeEventListener("mousemove", handleDrag);
   document.removeEventListener("mouseup", handleDrop);
@@ -69,51 +118,11 @@ var getTimeFormat = function (second) {
   }`;
 };
 
-audio.addEventListener("canplay", function () {
-  durationEl.innerText = getTimeFormat(audio.duration);
-});
-
-playAction.addEventListener("click", function () {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-});
-
-audio.addEventListener("play", function () {
-  playAction.classList.replace("fa-play", "fa-pause");
-});
-
-audio.addEventListener("pause", function () {
-  playAction.classList.replace("fa-pause", "fa-play");
-});
-
-audio.addEventListener("timeupdate", timeUpdate);
-
 function timeUpdate() {
   currentTimeEl.innerText = getTimeFormat(audio.currentTime);
   var rate = (audio.currentTime / audio.duration) * 100;
   processEl.style.width = `${rate}%`;
 }
-
-processBar.addEventListener("mousemove", createTimeCurrentBox);
-
-function createTimeCurrentBox(e) {
-  var rate = (e.offsetX / processBarWidth) * 100;
-  var seconds = getTimeFormat((rate / 100) * audio.duration);
-
-  if (!timeCurrentBox) {
-    timeCurrentBox = document.createElement("span");
-    timeCurrentBox.classList.add("time-box");
-    processBar.appendChild(timeCurrentBox);
-  }
-
-  timeCurrentBox.innerText = `${seconds}`;
-  timeCurrentBox.style.left = `${rate}%`;
-}
-
-processBar.addEventListener("mouseleave", removeTimeCurrentBox);
 
 function removeTimeCurrentBox() {
   if (timeCurrentBox) {
@@ -121,10 +130,3 @@ function removeTimeCurrentBox() {
     timeCurrentBox = null;
   }
 }
-
-audio.addEventListener("ended", function () {
-  audio.currentTime = 0;
-  processEl.style.width = "0%";
-  currentTimeEl.innerText = getTimeFormat(0);
-  playAction.classList.replace("fa-pause", "fa-play");
-});
