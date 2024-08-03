@@ -11,13 +11,13 @@ var distance = 0;
 var position = 0;
 var offsetLeft = 0;
 var timeCurrentBox;
+var isDragging = false;
 
 processBar.addEventListener("mousedown", function (e) {
   if (e.which === 1) {
+    isDragging = true;
     var offsetX = e.offsetX;
     var rate = (offsetX / processBarWidth) * 100;
-    var seconds = (rate / 100) * audio.duration;
-    audio.currentTime = seconds;
     processEl.style.width = `${rate}%`;
     distance = e.clientX;
     offsetLeft = offsetX;
@@ -29,19 +29,20 @@ processBar.addEventListener("mousedown", function (e) {
 
 circleEl.addEventListener("mousedown", function (e) {
   e.stopPropagation();
-
   if (e.which === 1) {
+    isDragging = true;
     document.addEventListener("mousemove", handleDrag);
     document.addEventListener("mouseup", handleDrop);
     distance = e.clientX;
     offsetLeft = e.target.offsetLeft;
   }
 });
+
 circleEl.addEventListener("mousemove", function (e) {
   e.stopPropagation();
 });
 
-//Xây dựng audio
+// xây dựng audio
 audio.addEventListener("canplay", function () {
   durationEl.innerText = getTimeFormat(audio.duration);
 });
@@ -89,10 +90,11 @@ audio.addEventListener("ended", function () {
   playAction.classList.replace("fa-pause", "fa-play");
 });
 
-//function
+// các function
 function handleDrop() {
   document.removeEventListener("mousemove", handleDrag);
   document.removeEventListener("mouseup", handleDrop);
+  isDragging = false;
   var rate = parseFloat(processEl.style.width);
   var seconds = (rate / 100) * audio.duration;
   if (!isNaN(seconds) && seconds >= 0 && seconds <= audio.duration) {
@@ -103,11 +105,14 @@ function handleDrop() {
 }
 
 function handleDrag(e) {
-  position = e.clientX;
-  var spaceMove = position - distance;
-  var rate = ((spaceMove + offsetLeft) / processBarWidth) * 100;
-  processEl.style.width = `${rate}%`;
-  audio.removeEventListener("timeupdate", timeUpdate);
+  if (isDragging) {
+    position = e.clientX;
+    var spaceMove = position - distance;
+    var rate = ((spaceMove + offsetLeft) / processBarWidth) * 100;
+    rate = Math.min(100, Math.max(0, rate));
+    processEl.style.width = `${rate}%`;
+    audio.removeEventListener("timeupdate", timeUpdate);
+  }
 }
 
 var getTimeFormat = function (second) {
@@ -119,9 +124,11 @@ var getTimeFormat = function (second) {
 };
 
 function timeUpdate() {
-  currentTimeEl.innerText = getTimeFormat(audio.currentTime);
-  var rate = (audio.currentTime / audio.duration) * 100;
-  processEl.style.width = `${rate}%`;
+  if (!isDragging) {
+    currentTimeEl.innerText = getTimeFormat(audio.currentTime);
+    var rate = (audio.currentTime / audio.duration) * 100;
+    processEl.style.width = `${rate}%`;
+  }
 }
 
 function removeTimeCurrentBox() {
