@@ -1,0 +1,11 @@
+input {
+  outline: none;
+}
+.add-to-basket {
+  display: flex;
+  flex-direction: column;
+}
+.btn-box {
+  display: flex;
+  column-gap: 5px;
+}
